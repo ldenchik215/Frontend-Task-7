@@ -1,3 +1,7 @@
+$b-color: blue;
+
 body {
-	background: red;
+  background: $b-color;
+  display: flex;
+  min-width: 16px;
 }
