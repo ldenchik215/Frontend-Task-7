@@ -16,7 +16,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'CPS',
       template: path.resolve(__dirname, './src/index.html'),
-      inject: true
+      inject: true,
+      filename: 'index.[contenthash].html'
     }),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css'
