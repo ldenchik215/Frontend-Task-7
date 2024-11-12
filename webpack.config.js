@@ -8,7 +8,7 @@ module.exports = {
     filename: path.resolve(__dirname, 'src/index.js')
   },
   output: {
-    filename: 'index.[contenthash].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
@@ -16,10 +16,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'CPS',
       template: path.resolve(__dirname, './src/index.html'),
-      inject: true,
+      inject: true
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: 'style.css'
     })
   ],
   module: {

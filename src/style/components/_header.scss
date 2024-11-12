@@ -1,0 +1,124 @@
+.header {
+  position: fixed;
+  height: 88px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 5;
+
+  @media (min-width: 1120px) {
+    background-color: #f8f8f8;
+    padding-left: 306px;
+  }
+
+  &__inner {
+    /*display: flex;
+		align-items: center;
+		justify-content: space-between;*/
+    display: grid;
+    grid-template-columns: 40px 97px 1fr 96px;
+    align-items: center;
+    gap: 16px;
+    height: 88px;
+    padding: 10px 0;
+    border-bottom: 1px solid #d9fff5;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 40px 10px 97px 1fr 10px 96px;
+    }
+
+    @media (min-width: 1120px) {
+      display: flex;
+      border: none;
+    }
+  }
+
+  &__inner::before,
+  &__inner::after {
+    margin: 0 4px;
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &__inner::before {
+    @media (min-width: 768px) {
+      content: '';
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      order: 1;
+    }
+  }
+
+  &__inner::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    order: 4;
+    justify-self: end;
+  }
+
+  &__logo-link {
+    order: 2;
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &__profile {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      order: 4;
+      gap: 16px;
+      justify-self: end;
+    }
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &__repair-status {
+    display: flex;
+    gap: 16px;
+    order: 5;
+
+    @media (min-width: 1120px) {
+      margin-left: auto;
+    }
+  }
+
+  &__repair-status-link {
+    @media (min-width: 1120px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &__repair-status-label {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: inline-block;
+    }
+  }
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff3e79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

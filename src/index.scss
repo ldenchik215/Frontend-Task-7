@@ -1,9 +1,12 @@
-@use './libs/normalize.css';
-@use './style/reset.css';
+@use './style/common/normalize';
+@use './style/common/reset';
+@use './style/common/libs';
+@use './style/common/variable';
+@use './style/common/fonts';
+@use './style/common/global';
 
-@use './style/variable.scss';
-@use './style/global.scss';
-
-@use './style/header_block1.css';
-@use './style/menu.css';
-@use './style/slider_brands.css';
+@use './style/components/header';
+@use './style/components/menu';
+//@use './style/header_block1.css';
+//@use './style/menu.css';
+//@use './style/slider_brands.css';
