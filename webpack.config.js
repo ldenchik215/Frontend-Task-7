@@ -17,7 +17,6 @@ module.exports = {
       title: 'CPS',
       template: path.resolve(__dirname, './src/index.html'),
       inject: true,
-      filename: 'index.[contenthash].html'
     }),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css'

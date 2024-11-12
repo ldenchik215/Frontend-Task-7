@@ -1,2 +1,9 @@
+@use './libs/normalize.css';
+@use './style/reset.css';
+
 @use './style/variable.scss';
 @use './style/global.scss';
+
+@use './style/header_block1.css';
+@use './style/menu.css';
+@use './style/slider_brands.css';
