@@ -1,4 +1,4 @@
-import './scss/main.scss'
+import './index.scss'
+import './index.html'
 
-console.log('Hello');
-
+console.log('Hello')
