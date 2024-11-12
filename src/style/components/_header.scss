@@ -1,14 +1,16 @@
+@use '../common/variable' as *;
+
 .header {
   position: fixed;
   height: 88px;
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: $bg-block;
   z-index: 5;
 
   @media (min-width: 1120px) {
-    background-color: #f8f8f8;
+    background-color: $bg-body;
     padding-left: 306px;
   }
 
