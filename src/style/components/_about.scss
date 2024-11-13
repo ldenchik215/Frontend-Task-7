@@ -1,0 +1,76 @@
+@use './../common/variable' as *;
+
+.about {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      display: block;
+
+      &::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+    }
+  }
+
+  &__img-box {
+    margin: 0 -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+
+    @media (min-width: 768px) {
+      float: right;
+      width: 40%;
+      margin-left: 49px;
+      margin-bottom: 24px;
+    }
+    @media (min-width: 1440px) {
+      width: 532px;
+      margin-left: 34px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 420px;
+
+    @media (min-width: 767px) {
+      max-width: none;
+    }
+  }
+
+  &__text-box {
+    margin-bottom: 16px;
+    max-height: 90px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: 767px) {
+      max-height: 160px;
+      line-height: 20px;
+    }
+  }
+
+  &__text-box--show {
+    max-height: none;
+  }
+
+  &__text {
+    display: none;
+  }
+
+  &__text + &__text {
+    margin-top: 16px;
+  }
+
+  &__text:nth-child(-n + 2) {
+    display: block;
+  }
+}

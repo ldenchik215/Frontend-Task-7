@@ -1,0 +1,39 @@
+@use './../common/variable' as *;
+
+.repair-brands-section {
+  &__cards {
+    margin-bottom: 16px;
+  }
+  &__read-more-btn {
+    display: none;
+  }
+}
+
+.cards-brands {
+  height: 100px;
+
+  &__item {
+    padding: 16px;
+    width: 240px;
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+}
+
+.swiper .swiper-pagination {
+  line-height: 8px;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #dddddd;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}

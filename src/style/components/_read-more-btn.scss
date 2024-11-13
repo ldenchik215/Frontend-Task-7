@@ -1,0 +1,33 @@
+@use './../common/variable' as *;
+
+.read-more-btn {
+  position: relative;
+  padding-left: 32px;
+  width: 132px;
+  height: 24px;
+  background-color: transparent;
+  color: $text-secondary;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  transition: all 0.3s ease 0s;
+
+  &::before {
+    content: '';
+    background: url('./img/icons/icon-read-more.svg') 0 0 no-repeat;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 0;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:hover.read-more-btn {
+    transform: scale(1.02);
+  }
+
+  &--open.read-more-btn::before {
+    transform: rotate(-180deg);
+  }
+}

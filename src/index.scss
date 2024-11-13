@@ -6,6 +6,8 @@
 
 @use './style/components/header';
 @use './style/components/menu';
-//@use './style/header_block1.css';
-//@use './style/menu.css';
-//@use './style/slider_brands.css';
+@use './style/components/main-header';
+@use './style/components/about';
+@use './style/components/read-more-btn';
+@use './style/components/tech-brands';
+@use './style/components/arrow-link';

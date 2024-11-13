@@ -9,7 +9,7 @@ body {
   height: calc(100vh - 88px);
   background-color: #f8f8f8;
 
-  @media (min-width: 1120px) {
+  @media (min-width: 1440px) {
     padding-top: 18px;
     padding-left: 306px;
   }
@@ -25,10 +25,24 @@ body {
 
   @media (min-width: 1120px) {
     max-width: 1440px;
-    padding: 0 32px;
   }
 
   @media (min-width: 1440px) {
     margin: 0 auto;
+    padding: 0 32px;
   }
+}
+
+.title-wrapper {
+  background: linear-gradient(to right, #f8f8f8, #fff);
+}
+
+.section-title {
+  font-weight: normal;
+  letter-spacing: -0.2px;
+  padding: 16px 0;
+}
+
+.none {
+  display: none;
 }

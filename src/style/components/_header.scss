@@ -9,7 +9,7 @@
   background-color: $bg-block;
   z-index: 5;
 
-  @media (min-width: 1120px) {
+  @media (min-width: 1440px) {
     background-color: $bg-body;
     padding-left: 306px;
   }
@@ -24,13 +24,13 @@
     gap: 16px;
     height: 88px;
     padding: 10px 0;
-    border-bottom: 1px solid #d9fff5;
+    border-bottom: 1px solid $border-section;
 
     @media (min-width: 768px) {
       grid-template-columns: 40px 10px 97px 1fr 10px 96px;
     }
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
       display: flex;
       border: none;
     }
@@ -40,7 +40,7 @@
   &__inner::after {
     margin: 0 4px;
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
       display: none;
     }
   }
@@ -65,10 +65,13 @@
   }
 
   &__logo-link {
+    position: relative;
+    z-index: 10;
     order: 2;
 
-    @media (min-width: 1120px) {
-      display: none;
+    @media (min-width: 1440px) {
+      position: absolute;
+      left: 24px;
     }
   }
 
@@ -82,7 +85,7 @@
       justify-self: end;
     }
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
       display: none;
     }
   }
@@ -92,13 +95,13 @@
     gap: 16px;
     order: 5;
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
       margin-left: auto;
     }
   }
 
   &__repair-status-link {
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -109,7 +112,7 @@
   &__repair-status-label {
     display: none;
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
       display: inline-block;
     }
   }

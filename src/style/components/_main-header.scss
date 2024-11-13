@@ -1,0 +1,96 @@
+@use './../common/variable' as *;
+
+.main {
+  &__section {
+    border-top: 1px solid $border-section;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+    color: $text-secondary;
+    position: relative;
+    margin: 24px 0;
+
+    @media (min-width: 1440px) {
+      margin-bottom: 8px;
+      z-index: 6;
+    }
+  }
+
+  &__title::before {
+    content: '';
+    background-color: $decor-element;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 4px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+
+    @media (min-width: 768px) {
+      left: -24px;
+    }
+    @media (min-width: 1440px) {
+      left: -32px;
+    }
+  }
+}
+
+.services {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 20px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, $bg-body, transparent);
+  }
+
+  &__list {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 24px;
+    gap: 4px;
+    letter-spacing: -0.2px;
+
+    @media (min-width: 1120px) {
+      overflow-x: hidden;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+  }
+
+  &__item-link {
+    display: block;
+    padding: 8px 18px;
+    transition: all 0.3s ease 0s;
+    border: 2px solid transparent;
+    border-radius: 6px;
+  }
+
+  &__item-link:hover,
+  &__item-link--active {
+    background-color: $bg-block;
+  }
+
+  &__item-link:hover {
+    border-color: $decor-element-hover;
+  }
+
+  &__item-link--active {
+    border-color: $decor-element;
+  }
+}
