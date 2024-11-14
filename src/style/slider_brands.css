@@ -79,9 +79,9 @@
 
 
 @media (min-width: 768px) {
-	._container {
+	/*._container {
 		padding: 0 24px;
-	}
+	}*/
 
 	.repair-brands-section__title-wrapper {
 		margin-bottom: 24px;
@@ -123,11 +123,11 @@
 		opacity: 0.6;
 	}
 
-	.swiper .swiper-pagination {
+	/*.swiper .swiper-pagination {
 		display: none;
-	}
+	}*/
 
-	.repair-brands-section__read-more-btn {
+	/*.repair-brands-section__read-more-btn {
 		display: block;
 	}
 
@@ -161,7 +161,7 @@
 
 	.read-more-btn--open.read-more-btn::before {
 		transform: rotate(-180deg);
-	}
+	}*/
 
 
 }

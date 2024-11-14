@@ -3,6 +3,14 @@
 .main {
   &__section {
     border-top: 1px solid $border-section;
+    margin-top: 24px;
+
+    @media (min-width: 768px) {
+      margin-top: 32px;
+    }
+    @media (min-width: 1440px) {
+      margin-top: 50px;
+    }
   }
 
   &__title {
@@ -17,6 +25,7 @@
     @media (min-width: 1440px) {
       margin-bottom: 8px;
       z-index: 6;
+      width: 60%;
     }
   }
 

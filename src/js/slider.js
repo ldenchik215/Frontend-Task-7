@@ -2,6 +2,7 @@ import Swiper from 'swiper'
 import { Pagination } from 'swiper/modules'
 
 let brandsSlider = null
+let typeSlider = null
 const mediaQuerySize = 768
 
 if (document.body.clientWidth < mediaQuerySize) {
@@ -17,22 +18,25 @@ window.addEventListener('resize', () => {
 })
 
 function sliderInit() {
-  if (!brandsSlider) {
-    brandsSlider = new Swiper('.swiper', {
-      modules: [Pagination],
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 16,
-      pagination: {
-        el: '.swiper-pagination'
-      }
-    })
+  if (!brandsSlider && !typeSlider) {
+    brandsSlider,
+      (typeSlider = new Swiper('.swiper', {
+        modules: [Pagination],
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination'
+        }
+      }))
   }
 }
 
 function sliderDestroy() {
-  if (brandsSlider) {
+  if (brandsSlider && typeSlider) {
     brandsSlider.destroy()
     brandsSlider = null
+    typeSlider.destroy()
+    typeSlider = null
   }
 }

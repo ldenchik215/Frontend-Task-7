@@ -1,13 +1,15 @@
+@use './variable' as *;
+
 body {
   font-family: 'TT Lakes';
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.2px;
   line-height: 24px;
-  color: #7e7e82;
+  color: $text-base;
   padding-top: 88px;
   height: calc(100vh - 88px);
-  background-color: #f8f8f8;
+  background-color: $bg-body;
 
   @media (min-width: 1440px) {
     padding-top: 18px;
@@ -24,17 +26,16 @@ body {
   }
 
   @media (min-width: 1120px) {
-    max-width: 1440px;
+    margin: 0 auto;
   }
 
   @media (min-width: 1440px) {
-    margin: 0 auto;
     padding: 0 32px;
   }
 }
 
 .title-wrapper {
-  background: linear-gradient(to right, #f8f8f8, #fff);
+  background: linear-gradient(to right, $bg-body, $bg-block);
 }
 
 .section-title {

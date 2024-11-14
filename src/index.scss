@@ -3,6 +3,7 @@
 @use './style/common/libs';
 @use './style/common/fonts';
 @use './style/common/global';
+@use './style/common/swiper';
 
 @use './style/components/header';
 @use './style/components/menu';
@@ -10,4 +11,4 @@
 @use './style/components/about';
 @use './style/components/read-more-btn';
 @use './style/components/tech-brands';
-@use './style/components/arrow-link';
+@use './style/components/tech-types';
