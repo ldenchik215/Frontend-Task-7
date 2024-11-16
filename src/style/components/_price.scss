@@ -1,0 +1,244 @@
+@use './../common/variable' as *;
+
+.price-section {
+  // .price-section__title-wrapper
+
+  &__title-wrapper {
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .price-section__cards
+
+  &__cards {
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .price-section__remark
+
+  &__remark {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $text-secondary;
+    margin-bottom: 16px;
+  }
+
+  // .price-section__link
+
+  &__link {
+    letter-spacing: -0.2px;
+    padding-right: 20px;
+    background: url('./img/icons/get-offer-arrow.svg') right center no-repeat;
+    position: relative;
+
+    &:visited {
+      color: $text-secondary;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $decor-element-hover;
+      width: 0;
+      height: 1.5px;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.cards-price {
+  font-size: 14px;
+  color: $text-secondary;
+  line-height: 18px;
+  font-weight: normal;
+  // .cards-price__list
+
+  &__list {
+    border-radius: 6px;
+    //height: 228px;
+    padding-bottom: 28px;
+
+    @media (min-width: 768px) {
+      background: $bg-block;
+      padding: 0 16px;
+      display: block;
+      width: auto;
+      height: auto;
+    }
+    @media (min-width: 1440px) {
+      padding: 0 24px;
+    }
+  }
+
+  // .cards-price__header
+
+  &__header {
+    display: none;
+
+    @media (min-width: 768px) {
+      font-weight: 500;
+      color: $text-base;
+      line-height: 16px;
+      letter-spacing: 0;
+      opacity: 72%;
+    }
+
+    @media (min-width: 1440px) {
+      padding: 0 24px;
+    }
+  }
+
+  &__header.cards-price__item {
+    padding: 0 16px;
+  }
+
+  // .cards-price__item
+
+  &__item {
+    padding: 16px;
+    width: 260px;
+    height: 200px;
+    background: $bg-block;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+
+    *::before {
+      @media (max-width: 768px) {
+        font-weight: 500;
+        color: $text-base;
+        line-height: 16px;
+        letter-spacing: 0;
+        opacity: 72%;
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: auto;
+      height: auto;
+      display: grid;
+      gap: 25px;
+      grid-template-columns: 1fr 75px 100px 119px;
+      grid-template-rows: 64px;
+      align-items: center;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    @media (min-width: 1120px) {
+      gap: 80px;
+    }
+
+    @media (min-width: 1440px) {
+      gap: 120px;
+    }
+  }
+
+  &__item + &__item {
+    @media (min-width: 768px) {
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  // .cards-price__col-services-name
+
+  &__col-services-name {
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+
+      &::before {
+        content: 'Ремонтные услуги';
+      }
+    }
+  }
+
+  // .cards-price__col-price
+
+  &__col-price {
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+
+      &::before {
+        content: 'Цена';
+      }
+    }
+  }
+
+  // .cards-price__col-term
+
+  &__col-term {
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+
+      &::before {
+        content: 'Срок';
+      }
+    }
+  }
+
+  // .cards-price__col-order
+
+  &__col-order {
+    @media (max-width: 768px) {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+
+  // .cards-price__col-order-btn
+
+  &__col-order-btn {
+    display: block;
+    height: 32px;
+    width: 119px;
+    background-color: $icon;
+    padding: 4px 40px 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    font-weight: bold;
+    color: $bg-block;
+    position: relative;
+
+    @media (min-width: 768px) {
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &::after {
+      content: '';
+      background: url('./img/icons/order-arrow.svg') 0 center no-repeat;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 7px;
+      height: 10px;
+    }
+
+    &:visited {
+      color: $bg-block;
+    }
+  }
+}

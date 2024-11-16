@@ -108,9 +108,7 @@
   &--open &__body {
     transform: translateX(0);
   }
-  &__overlay Х {
-    display: none;
-  }
+
   &--open &__overlay {
     position: absolute;
     left: 0;
@@ -119,6 +117,10 @@
     height: 100vh;
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.9);
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
   }
 
   &__search-wrapper {

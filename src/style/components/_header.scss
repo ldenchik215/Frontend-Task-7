@@ -8,10 +8,12 @@
   left: 0;
   background-color: $bg-block;
   z-index: 5;
+  border-bottom: 1px solid $border-section;
 
   @media (min-width: 1440px) {
     background-color: $bg-body;
     padding-left: 306px;
+    border: none;
   }
 
   &__inner {
@@ -24,7 +26,6 @@
     gap: 16px;
     height: 88px;
     padding: 10px 0;
-    border-bottom: 1px solid $border-section;
 
     @media (min-width: 768px) {
       grid-template-columns: 40px 10px 97px 1fr 10px 96px;
@@ -32,7 +33,6 @@
 
     @media (min-width: 1440px) {
       display: flex;
-      border: none;
     }
   }
 

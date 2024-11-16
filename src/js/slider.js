@@ -3,6 +3,7 @@ import { Pagination } from 'swiper/modules'
 
 let brandsSlider = null
 let typeSlider = null
+let priceSlider = null
 const mediaQuerySize = 768
 
 if (document.body.clientWidth < mediaQuerySize) {
@@ -18,25 +19,56 @@ window.addEventListener('resize', () => {
 })
 
 function sliderInit() {
-  if (!brandsSlider && !typeSlider) {
-    brandsSlider,
-      (typeSlider = new Swiper('.swiper', {
-        modules: [Pagination],
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        pagination: {
-          el: '.swiper-pagination'
-        }
-      }))
+  if (!brandsSlider) {
+    brandsSlider = new Swiper('.cards-brands', {
+      modules: [Pagination],
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination'
+      }
+    })
+  }
+
+  if (!typeSlider) {
+    typeSlider = new Swiper('.cards-types', {
+      modules: [Pagination],
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination'
+      }
+    })
+  }
+
+  if (!priceSlider) {
+    priceSlider = new Swiper('.cards-price', {
+      modules: [Pagination],
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination'
+      }
+    })
   }
 }
 
 function sliderDestroy() {
-  if (brandsSlider && typeSlider) {
+  if (brandsSlider) {
     brandsSlider.destroy()
     brandsSlider = null
+  }
+
+  if (typeSlider) {
     typeSlider.destroy()
     typeSlider = null
+  }
+
+  if (priceSlider) {
+    priceSlider.destroy()
+    priceSlider = null
   }
 }
