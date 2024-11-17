@@ -59,12 +59,12 @@
 							</nav>
 							<div class="menu_footer">
 								<div class="menu__profile profile">
-									<a href="#" class="profile__action-link">
+									<a href="#" class="profile__action-link profile__action-link-call">
 										<div class="icon-box">
 											<img src="./img/icons/icon-phone.svg" alt="" class="profile__action-icon">
 										</div>
 									</a>
-									<a href="#" class="profile__action-link">
+									<a href="#" class="profile__action-link profile__action-link-message">
 										<div class="icon-box">
 											<img src="./img/icons/icon-chat.svg" alt="" class="profile__action-icon">
 										</div>
@@ -97,12 +97,12 @@
 					<img src="./img/icons/icon-logo.svg" alt="логотип" class="header__logo-img" width="97px" height="51px">
 				</a>
 				<div class="header__profile profile">
-					<a href="#" class="profile__action-link">
+					<a href="#" class="profile__action-link profile__action-link-call">
 						<div class="icon-box">
 							<img src="./img/icons/icon-phone.svg" alt="" class="profile__action-icon">
 						</div>
 					</a>
-					<a href="#" class="profile__action-link">
+					<a href="#" class="profile__action-link profile__action-link-message">
 						<div class="icon-box">
 							<img src="./img/icons/icon-chat.svg" alt="" class="profile__action-icon">
 						</div>
@@ -134,6 +134,53 @@
 			</div>
 
 		</div>
+
+		<div class="modal modal-message">
+			<div class="modal__body">
+				<div class="modal__wrapper">
+					<div class="modal__icon-close icon-box">
+						<div class="modal__icon-lines"></div>
+					</div>
+					<h3 class="modal__title">Обратная связь</h3>
+					<form action="#" method="get" class="modal__form">
+						<input type="text" name="name" placeholder="Имя" class="modal__form-name">
+						<input type="phone" pattern="^\+7[1-9]{10}$" name="phone" placeholder="Телефон" class="modal__form-phone">
+						<input type="email" name="email" placeholder="Электронная почта" class="modal__form-email">
+						<textarea name="message" placeholder="Сообщение" class="modal__form-message"></textarea>
+						<p class="modal__disclaimer">Нажимая “отправить”, вы даете согласие на
+							<a href="#" class="modal__link-personal-data">обработку персональных данных</a>
+							и
+							соглашаетесь с нашей
+							<a href="#" class="modal__link-privacy-policy">политикой конфиденциальности</a>
+						</p>
+						<button type="submit" class="modal__form-btn">ОТПРАВИТЬ</button>
+					</form>
+				</div>
+			</div>
+			<div class="modal__overlay"></div>
+		</div>
+
+		<div class="modal modal-call">
+			<div class="modal__body">
+				<div class="modal__wrapper">
+					<div class="modal__icon-close icon-box">
+						<div class="modal__icon-lines"></div>
+					</div>
+					<h3 class="modal__title">Обратная связь</h3>
+					<form action="#" method="get" class="modal__form">
+						<input type="phone" name="phone" pattern="^\+7[1-9]{10}$" placeholder="Телефон" class="modal__form-phone">
+						<p class="modal__disclaimer">Нажимая “отправить”, вы даете согласие на и
+							соглашаетесь с нашей
+							<a href="#" class="modal__link-personal-data">обработку персональных данных</a>
+							<a href="#" class="modal__link-privacy-policy">политикой конфиденциальности</a>
+						</p>
+						<button type="submit" class="modal__form-btn">ОТПРАВИТЬ</button>
+					</form>
+				</div>
+			</div>
+			<div class="modal__overlay"></div>
+		</div>
+
 	</header>
 
 	<!-- ===================================================Main=========================================== -->
@@ -448,6 +495,17 @@
 	</main>
 
 	<footer class="footer">
+		<div class="_container">
+			<div class="footer__wrapper">
+				<div class="footer__copyright">
+					<span>© 2019 CPS </span>Разработано командой Apesong
+				</div>
+				<a href="#" class="footer__privacy-policy">Политика конфиденциальности</a>
+				<div class="footer__disclaimer">
+					Информация, размещенная на данной странице, не является публичной офертой
+				</div>
+			</div>
+		</div>
 	</footer>
 
 </body>
