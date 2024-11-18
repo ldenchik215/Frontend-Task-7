@@ -1,3 +1,5 @@
+import { bodyScrollToggle } from './noScrollBody.js'
+
 const body = document.querySelector('body')
 const menu = document.querySelector('.menu')
 const menuBtn = document.querySelector('.menu__icon')
@@ -12,11 +14,3 @@ menuOverlay.addEventListener('click', () => {
   menu.classList.remove('menu--open')
   bodyScrollToggle()
 })
-
-function bodyScrollToggle() {
-  if (menu.classList.contains('menu--open')) {
-    body.classList.add('no-scroll')
-  } else {
-    body.classList.remove('no-scroll')
-  }
-}
