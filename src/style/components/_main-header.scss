@@ -1,6 +1,7 @@
 @use './../common/variable' as *;
 
 .main {
+  overflow: hidden;
   &__section {
     border-bottom: 1px solid $border-section;
     padding-bottom: 24px;

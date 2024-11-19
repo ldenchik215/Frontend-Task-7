@@ -10,6 +10,7 @@ body {
   padding-top: 88px;
   height: calc(100vh - 88px);
   background-color: $bg-body;
+  overflow-x: hidden;
 
   @media (min-width: 1440px) {
     padding-top: 18px;
