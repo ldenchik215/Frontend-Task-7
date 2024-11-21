@@ -11,6 +11,8 @@
     }
     @media (min-width: 1440px) {
       padding-bottom: 50px;
+      max-width: 1440px;
+      margin: 0 auto;
     }
   }
 
@@ -40,8 +42,8 @@
     height: 40px;
     border-radius: 0 4px 4px 0;
 
-    @media (min-width: 768px) {
-      left: -24px;
+    @media (min-width: 360px) {
+      left: -23px;
     }
     @media (min-width: 1440px) {
       left: -32px;

@@ -17,9 +17,6 @@
   }
 
   &__inner {
-    /*display: flex;
-		align-items: center;
-		justify-content: space-between;*/
     display: grid;
     grid-template-columns: 40px 97px 1fr 96px;
     align-items: center;
@@ -33,6 +30,7 @@
 
     @media (min-width: 1440px) {
       display: flex;
+      position: relative;
     }
   }
 
@@ -71,7 +69,7 @@
 
     @media (min-width: 1440px) {
       position: absolute;
-      left: 24px;
+      left: -336px;
     }
   }
 
